@@ -23,7 +23,7 @@
         tools:layout_editor_absoluteX="32dp" />
 
     <Button
-        android:id="@+id/buttonFootball"
+        android:id="@+id/buttonSoccer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -33,12 +33,12 @@
         tools:ignore="HardcodedText,VisualLintButtonSize" />
 
     <Button
-        android:id="@+id/buttonMiniFootball"
+        android:id="@+id/buttonMiniSoccer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Canchas de micro fútbol"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFootball"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSoccer"
         tools:layout_editor_absoluteX="16dp"
         tools:ignore="HardcodedText,VisualLintButtonSize" />
 
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Gimnasios"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMiniFootball"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMiniSoccer"
         tools:layout_editor_absoluteX="28dp"
         tools:ignore="HardcodedText,VisualLintButtonSize" />
 

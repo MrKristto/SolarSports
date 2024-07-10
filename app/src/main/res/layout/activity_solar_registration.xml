@@ -10,46 +10,155 @@
     tools:context=".SolarRegistrationActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:fontFamily="sans-serif-black"
-        android:text="Registrar instalación"
+        android:text="Registro Instalación"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText"
         tools:layout_editor_absoluteX="32dp" />
 
-    <Button
-        android:id="@+id/buttonSoccer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/textViewType"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Tipo Instalación:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="197dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
-        android:text="Canchas de fútbol"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:ignore="HardcodedText,VisualLintButtonSize" />
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/textViewType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        tools:ignore="MissingConstraints" />
+
+     <TextView
+        android:id="@+id/textViewPower"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Potencia:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewType"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerPower"
+        android:layout_width="197dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/textViewPower"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerType"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewPSH"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="HSP:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPower"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextPSH"
+        android:layout_width="192dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="HSP"
+        android:inputType="text"
+        android:textColorHint="#546E7A"
+        app:layout_constraintStart_toEndOf="@+id/textViewPSH"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPower"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewSurface"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Superficie m2:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPSH"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextSurface"
+        android:layout_width="192dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Superficie m2"
+        android:inputType="numberDecimal"
+        android:textColorHint="#546E7A"
+        app:layout_constraintStart_toEndOf="@+id/textViewSurface"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPSH"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewQuantity"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Cantidad paneles:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSurface"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/editTextQuantity"
+        android:layout_width="192dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Cantidad paneles"
+        android:inputType="number"
+        android:textColorHint="#546E7A"
+        app:layout_constraintStart_toEndOf="@+id/textViewQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSurface"
+        tools:ignore="Autofill,HardcodedText" />
 
     <Button
-        android:id="@+id/buttonMiniSoccer"
+        android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Canchas de micro fútbol"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSoccer"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="HardcodedText,VisualLintButtonSize" />
-
-    <Button
-        android:id="@+id/buttonGyms"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Gimnasios"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMiniSoccer"
-        tools:layout_editor_absoluteX="28dp"
+        android:text="Guardar registro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuantity"
+        tools:layout_editor_absoluteX="147dp"
         tools:ignore="HardcodedText,VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

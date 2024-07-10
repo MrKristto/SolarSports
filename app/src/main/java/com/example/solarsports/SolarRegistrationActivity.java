@@ -8,7 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 public class SolarRegistrationActivity extends AppCompatActivity {
 
@@ -23,10 +27,19 @@ public class SolarRegistrationActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button buttonSoccer = findViewById(R.id.buttonSoccer);
+        String[] type = {"Cancha de Fútbol","Cancha Micro-Fútbol","Gimnasio"};
+        String[] power = {"200W","250W","300W","350W","400W","450W","500W"};
 
-        buttonSoccer.setOnClickListener(v -> {
-            Intent intent = new Intent(SolarRegistrationActivity.this, SolarRegistrationSoccerActivity.class);
+        Spinner spinnerType = findViewById(R.id.spinnerType);
+        Spinner spinnerPower = findViewById(R.id.spinnerPower);
+        Button buttonSave = findViewById(R.id.buttonSave);
+
+        spinnerType.setAdapter(new ArrayAdapter<>(SolarRegistrationActivity.this, android.R.layout.simple_spinner_item, type));
+        spinnerPower.setAdapter(new ArrayAdapter<>(SolarRegistrationActivity.this, android.R.layout.simple_spinner_item, power));
+
+        buttonSave.setOnClickListener(v -> {
+            Toast.makeText(getApplicationContext(), "El registro se ha realizado correctamente.", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(SolarRegistrationActivity.this, MenuActivity.class);
             startActivity(intent);
         });
 

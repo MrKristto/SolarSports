@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SolarSports"
         tools:targetApi="31">
         <activity
+            android:name=".SolarRegistrationSoccerActivity"
+            android:exported="false" />
+        <activity
             android:name=".SolarTipsActivity"
             android:exported="false" />
         <activity
@@ -23,9 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".SolarRegistrationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CategoriesActivity"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"

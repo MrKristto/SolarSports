@@ -7,19 +7,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".SolarTipsActivity">
+    tools:context=".SolarTrackingListActivity"
+    tools:ignore="VisualLintBounds">
 
-    <TextView
-        android:id="@+id/textView"
+    <ListView
+        android:id="@+id/ListViewFields"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Tips de ahorro"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText"
-        tools:layout_editor_absoluteX="32dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

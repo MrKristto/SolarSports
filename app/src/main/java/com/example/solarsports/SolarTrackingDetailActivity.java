@@ -8,35 +8,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import java.util.ArrayList;
-
-public class SolarTrackingListActivity extends AppCompatActivity {
+public class SolarTrackingDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_solar_tracking_list);
+        setContentView(R.layout.activity_solar_tracking_detail);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        String type = getIntent().getStringExtra("Type");
-
-        ArrayList<FieldsList> fields = new ArrayList<FieldsList>();
-
-        for (int i = 1; i <= 20; i++) {
-            fields.add(new FieldsList(type + " " + i, "20 m²", "500 Kwh"));
-        }
-
-        ListView listviewFields = findViewById(R.id.ListViewFields);
-
-        listviewFields.setAdapter(new FieldsListAdapter(this, fields));
-
     }
-
 }

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "835502168774",
+    "firebase_url": "https://solarsports-41422-default-rtdb.firebaseio.com",
+    "project_id": "solarsports-41422",
+    "storage_bucket": "solarsports-41422.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835502168774:android:329765aaaa8284b36115c7",
+        "android_client_info": {
+          "package_name": "com.example.solarsports"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByEuE5Kg_040-7bgnA3wFjJ9iYuuMx8x4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
